@@ -1,6 +1,3 @@
-2019-10-16T05:23:12;username_test09;custom_message47
 2019-10-16T06:34:12;username_test4;custom_message55
 2019-10-16T07:21:24;username_test45;custom_message55
 2019-10-16T07:23:12;username_test49;custom_message55
-2019-10-16T10:01:22;username_test49;custom_message57
-2019-10-16T13:23:12;username_test44;custom_message67

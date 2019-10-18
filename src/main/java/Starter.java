@@ -5,7 +5,9 @@ import exception.NoSpecifiedParametersForSearchLogsException;
 import lombok.Getter;
 import repository.impl.PathsRepositoryImpl;
 import service.FilterService;
+import service.StatisticService;
 import service.impl.FilterServiceImpl;
+import service.impl.StatisticServiceImpl;
 import utils.DataTimePeriod;
 
 import java.io.IOException;
@@ -18,7 +20,11 @@ public class Starter {
     @Getter
     private static FilterService filterService = new FilterServiceImpl();
 
-    public static void main(String[] args) throws NoSpecifiedParametersForSearchLogsException, DataTimeFormatException, FilterLogsThreadException, GetFilesPathsException, IOException {
+    @Getter
+    private static StatisticService statisticService = new StatisticServiceImpl();
+
+    public static void main(String[] args) throws NoSpecifiedParametersForSearchLogsException, DataTimeFormatException,
+            FilterLogsThreadException, GetFilesPathsException, IOException, IllegalAccessException {
 
         Scanner in = new Scanner(System.in);
         System.out.print("Enter username filter parameter to specify logs: ");
@@ -58,6 +64,7 @@ public class Starter {
         }
 
         filterService.getFileWithFilteredLogs(Paths.get(output), dataTimePeriod, username, message, threadCount);
+        statisticService.getStatistic(groupingParam,dataTimePeriod, username, message, threadCount);
     }
 
     private static Boolean isSearchSpecified(String username, String timeFrom, String timeTo, String message) {

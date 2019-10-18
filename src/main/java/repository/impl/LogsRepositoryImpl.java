@@ -54,10 +54,8 @@ public class LogsRepositoryImpl implements LogsRepository {
 
     private List<List<String>> getFilteredFilesWithFilteredLogs(List<Future<List<String>>> futures) throws ExecutionException, InterruptedException {
         List<List<String>> listOfFilteredFilesWithFilteredLogs = new ArrayList<>();
-
         for (Future<List<String>> future : futures) {
             listOfFilteredFilesWithFilteredLogs.addAll(Collections.singleton(future.get()));
-
         }
         return listOfFilteredFilesWithFilteredLogs;
     }
