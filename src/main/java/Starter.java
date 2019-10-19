@@ -64,7 +64,7 @@ public class Starter {
         }
 
         filterService.getFileWithFilteredLogs(Paths.get(output), dataTimePeriod, username, message, threadCount);
-        statisticService.getStatistic(groupingParam,dataTimePeriod, username, message, threadCount);
+        statisticService.getStatistic(groupingParam, dataTimePeriod, username, message, threadCount);
     }
 
     private static Boolean isSearchSpecified(String username, String timeFrom, String timeTo, String message) {
