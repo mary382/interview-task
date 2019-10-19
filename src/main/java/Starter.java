@@ -29,9 +29,9 @@ public class Starter {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter username filter parameter to specify logs: ");
         String username = in.nextLine();
-        System.out.print("Enter timeFrom filter parameter to specify logs: ");
+        System.out.print("Enter timeFrom filter parameter to specify logs(eg. 2019-10-16T06:45:23): ");
         String dataTimeFrom = in.nextLine();
-        System.out.print("Enter timeTo filter parameter to specify logs: ");
+        System.out.print("Enter timeTo filter parameter to specify logs(eg. 2020-10-16T06:45:23): ");
         String dataTimeTo = in.nextLine();
         System.out.print("Enter message filter parameter to specify logs: ");
         String message = in.nextLine();
